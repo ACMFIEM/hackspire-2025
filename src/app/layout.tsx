@@ -7,7 +7,8 @@ import Footer from "@/components/Footer";
 // import { AudioProvider } from "@/components/AudioContext"; // Commented out for now
 import AppLoader from "@/components/AppLoader";
 // import CustomCursor from "@/components/CustomCursor";
-
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -102,6 +103,8 @@ export default function RootLayout({
           <Footer />
         </AppLoader>
         {/* </AudioProvider> */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
